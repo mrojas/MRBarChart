@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "603EB96218F73EF8009EF2E9"
-               BuildableName = "bargraph.app"
-               BlueprintName = "bargraph"
-               ReferencedContainer = "container:bargraph.xcodeproj">
+               BuildableName = "barchart.app"
+               BlueprintName = "barchart"
+               ReferencedContainer = "container:barchart.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "603EB98318F73EF9009EF2E9"
-               BuildableName = "bargraphTests.xctest"
-               BlueprintName = "bargraphTests"
-               ReferencedContainer = "container:bargraph.xcodeproj">
+               BuildableName = "barchartTests.xctest"
+               BlueprintName = "barchartTests"
+               ReferencedContainer = "container:barchart.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "603EB96218F73EF8009EF2E9"
-            BuildableName = "bargraph.app"
-            BlueprintName = "bargraph"
-            ReferencedContainer = "container:bargraph.xcodeproj">
+            BuildableName = "barchart.app"
+            BlueprintName = "barchart"
+            ReferencedContainer = "container:barchart.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "603EB96218F73EF8009EF2E9"
-            BuildableName = "bargraph.app"
-            BlueprintName = "bargraph"
-            ReferencedContainer = "container:bargraph.xcodeproj">
+            BuildableName = "barchart.app"
+            BlueprintName = "barchart"
+            ReferencedContainer = "container:barchart.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "603EB96218F73EF8009EF2E9"
-            BuildableName = "bargraph.app"
-            BlueprintName = "bargraph"
-            ReferencedContainer = "container:bargraph.xcodeproj">
+            BuildableName = "barchart.app"
+            BlueprintName = "barchart"
+            ReferencedContainer = "container:barchart.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

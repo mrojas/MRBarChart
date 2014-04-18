@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MRViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHb-6e-c1S" customClass="MRBarChart">
+                                <rect key="frame" x="20" y="28" width="280" height="120"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="GGY-Jc-ESs"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark: 60" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4n-IU-jmG">
+                                <rect key="frame" x="20" y="223" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJO-4P-r3c">
+                                <rect key="frame" x="20" y="252" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="markUpButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eCr-0M-3aq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvn-Y5-4s9">
+                                <rect key="frame" x="58" y="252" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Down">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="markDownButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7I6-zm-A60"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar width: 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAM-Ih-sT7">
+                                <rect key="frame" x="198" y="156" width="102" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOg-tj-XAX">
+                                <rect key="frame" x="224" y="185" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="More">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="barWidthMoreButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xo3-OI-pYU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoq-2u-v7P">
+                                <rect key="frame" x="268" y="185" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Less">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="barWidthLessButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7ls-6Q-LlG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar Padding: 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qct-Up-uT3">
+                                <rect key="frame" x="185" y="223" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJG-Ag-P0A">
+                                <rect key="frame" x="224" y="252" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="More">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="barPaddingMoreButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="roF-Li-5wZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKT-fV-CDP">
+                                <rect key="frame" x="268" y="252" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Less">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="barPaddingLessButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4YA-vE-iL4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bars" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdR-h0-Tc1">
+                                <rect key="frame" x="20" y="156" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flw-QK-bRi">
+                                <rect key="frame" x="20" y="185" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addBarButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yWg-oU-lZm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6s-WJ-EK4">
+                                <rect key="frame" x="58" y="185" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Remove">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeBarButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ixn-al-kOP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zKT-fV-CDP" firstAttribute="trailing" secondItem="qct-Up-uT3" secondAttribute="trailing" id="65x-Z3-WpD"/>
+                            <constraint firstItem="mvn-Y5-4s9" firstAttribute="top" secondItem="OJO-4P-r3c" secondAttribute="top" id="8U1-nG-XAm"/>
+                            <constraint firstItem="B6s-WJ-EK4" firstAttribute="leading" secondItem="Flw-QK-bRi" secondAttribute="trailing" constant="8" symbolic="YES" id="9Nn-td-9wq"/>
+                            <constraint firstItem="qct-Up-uT3" firstAttribute="top" secondItem="FOg-tj-XAX" secondAttribute="bottom" constant="8" symbolic="YES" id="9m0-qC-wWv"/>
+                            <constraint firstAttribute="trailing" secondItem="cHb-6e-c1S" secondAttribute="trailing" constant="20" symbolic="YES" id="Dp3-O5-aC6"/>
+                            <constraint firstItem="zKT-fV-CDP" firstAttribute="top" secondItem="gJG-Ag-P0A" secondAttribute="top" id="E5T-Eg-rAu"/>
+                            <constraint firstItem="gJG-Ag-P0A" firstAttribute="top" secondItem="qct-Up-uT3" secondAttribute="bottom" constant="8" symbolic="YES" id="GoT-gc-Yo9"/>
+                            <constraint firstItem="FOg-tj-XAX" firstAttribute="top" secondItem="aoq-2u-v7P" secondAttribute="top" id="Hkg-tm-S7o"/>
+                            <constraint firstItem="mvn-Y5-4s9" firstAttribute="leading" secondItem="OJO-4P-r3c" secondAttribute="trailing" constant="8" symbolic="YES" id="HpH-x6-5gw"/>
+                            <constraint firstItem="KAM-Ih-sT7" firstAttribute="trailing" secondItem="aoq-2u-v7P" secondAttribute="trailing" id="Put-TG-wP8"/>
+                            <constraint firstItem="cHb-6e-c1S" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="SxG-ng-Km4"/>
+                            <constraint firstItem="aoq-2u-v7P" firstAttribute="leading" secondItem="FOg-tj-XAX" secondAttribute="trailing" constant="8" symbolic="YES" id="XgR-3O-DBd"/>
+                            <constraint firstItem="P4n-IU-jmG" firstAttribute="top" secondItem="Flw-QK-bRi" secondAttribute="bottom" constant="8" symbolic="YES" id="Z8G-7G-ZJ1"/>
+                            <constraint firstItem="P4n-IU-jmG" firstAttribute="leading" secondItem="OJO-4P-r3c" secondAttribute="leading" id="e9r-kI-xzV"/>
+                            <constraint firstItem="SdR-h0-Tc1" firstAttribute="top" secondItem="cHb-6e-c1S" secondAttribute="bottom" constant="8" symbolic="YES" id="ePA-Ff-hnW"/>
+                            <constraint firstItem="OJO-4P-r3c" firstAttribute="top" secondItem="P4n-IU-jmG" secondAttribute="bottom" constant="8" symbolic="YES" id="fZD-lF-ZhI"/>
+                            <constraint firstItem="zKT-fV-CDP" firstAttribute="leading" secondItem="gJG-Ag-P0A" secondAttribute="trailing" constant="8" symbolic="YES" id="iy3-7d-F9x"/>
+                            <constraint firstItem="SdR-h0-Tc1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="j5q-JF-NDK"/>
+                            <constraint firstItem="Flw-QK-bRi" firstAttribute="top" secondItem="B6s-WJ-EK4" secondAttribute="top" id="jmT-42-XWk"/>
+                            <constraint firstAttribute="trailing" secondItem="KAM-Ih-sT7" secondAttribute="trailing" constant="20" id="ko7-fB-05k"/>
+                            <constraint firstItem="P4n-IU-jmG" firstAttribute="leading" secondItem="SdR-h0-Tc1" secondAttribute="leading" id="qRv-A8-602"/>
+                            <constraint firstItem="cHb-6e-c1S" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" symbolic="YES" id="ra4-or-Cu0"/>
+                            <constraint firstAttribute="trailing" secondItem="qct-Up-uT3" secondAttribute="trailing" constant="20" id="t2O-Pn-gai"/>
+                            <constraint firstItem="Flw-QK-bRi" firstAttribute="top" secondItem="SdR-h0-Tc1" secondAttribute="bottom" constant="8" symbolic="YES" id="tFr-YR-hWi"/>
+                            <constraint firstItem="FOg-tj-XAX" firstAttribute="top" secondItem="KAM-Ih-sT7" secondAttribute="bottom" constant="8" symbolic="YES" id="teI-aL-dIM"/>
+                            <constraint firstItem="KAM-Ih-sT7" firstAttribute="top" secondItem="cHb-6e-c1S" secondAttribute="bottom" constant="8" id="xFh-Sx-V4C"/>
+                            <constraint firstItem="Flw-QK-bRi" firstAttribute="leading" secondItem="SdR-h0-Tc1" secondAttribute="leading" id="y98-OU-P52"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qjV-vP-WzF">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barChart" destination="cHb-6e-c1S" id="rkg-IS-ScZ"/>
+                        <outlet property="barPaddingLabel" destination="qct-Up-uT3" id="FJf-q7-4rC"/>
+                        <outlet property="barWidthLabel" destination="KAM-Ih-sT7" id="KVc-Dh-2Os"/>
+                        <outlet property="markLabel" destination="P4n-IU-jmG" id="DFo-ex-aIN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="161"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

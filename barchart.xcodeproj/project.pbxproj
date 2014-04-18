@@ -19,8 +19,8 @@
 		603EB98618F73EF9009EF2E9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603EB98518F73EF9009EF2E9 /* XCTest.framework */; };
 		603EB98718F73EF9009EF2E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603EB96618F73EF8009EF2E9 /* Foundation.framework */; };
 		603EB98818F73EF9009EF2E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603EB96A18F73EF8009EF2E9 /* UIKit.framework */; };
-		603EB99018F73EF9009EF2E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 603EB98E18F73EF9009EF2E9 /* InfoPlist.strings */; };
-		603EB99218F73EF9009EF2E9 /* bargraphTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 603EB99118F73EF9009EF2E9 /* bargraphTests.m */; };
+		603EB9A018F73F38009EF2E9 /* MRBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 603EB99D18F73F38009EF2E9 /* MRBarChart.m */; };
+		603EB9A118F73F38009EF2E9 /* MRBarChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 603EB99F18F73F38009EF2E9 /* MRBarChartCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,25 +34,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		603EB96318F73EF8009EF2E9 /* bargraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bargraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		603EB96318F73EF8009EF2E9 /* barchart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barchart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603EB96618F73EF8009EF2E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		603EB96818F73EF8009EF2E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		603EB96A18F73EF8009EF2E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		603EB96E18F73EF9009EF2E9 /* bargraph-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bargraph-Info.plist"; sourceTree = "<group>"; };
+		603EB96E18F73EF9009EF2E9 /* barchart-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "barchart-Info.plist"; sourceTree = "<group>"; };
 		603EB97018F73EF9009EF2E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		603EB97218F73EF9009EF2E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		603EB97418F73EF9009EF2E9 /* bargraph-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bargraph-Prefix.pch"; sourceTree = "<group>"; };
+		603EB97418F73EF9009EF2E9 /* barchart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "barchart-Prefix.pch"; sourceTree = "<group>"; };
 		603EB97518F73EF9009EF2E9 /* MRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRAppDelegate.h; sourceTree = "<group>"; };
 		603EB97618F73EF9009EF2E9 /* MRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRAppDelegate.m; sourceTree = "<group>"; };
 		603EB97918F73EF9009EF2E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		603EB97B18F73EF9009EF2E9 /* MRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRViewController.h; sourceTree = "<group>"; };
 		603EB97C18F73EF9009EF2E9 /* MRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRViewController.m; sourceTree = "<group>"; };
 		603EB97E18F73EF9009EF2E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		603EB98418F73EF9009EF2E9 /* bargraphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bargraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		603EB98418F73EF9009EF2E9 /* barchartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = barchartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		603EB98518F73EF9009EF2E9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		603EB98D18F73EF9009EF2E9 /* bargraphTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bargraphTests-Info.plist"; sourceTree = "<group>"; };
-		603EB98F18F73EF9009EF2E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		603EB99118F73EF9009EF2E9 /* bargraphTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bargraphTests.m; sourceTree = "<group>"; };
+		603EB99C18F73F38009EF2E9 /* MRBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRBarChart.h; sourceTree = "<group>"; };
+		603EB99D18F73F38009EF2E9 /* MRBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRBarChart.m; sourceTree = "<group>"; };
+		603EB99E18F73F38009EF2E9 /* MRBarChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRBarChartCell.h; sourceTree = "<group>"; };
+		603EB99F18F73F38009EF2E9 /* MRBarChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRBarChartCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +83,7 @@
 		603EB95A18F73EF8009EF2E9 = {
 			isa = PBXGroup;
 			children = (
-				603EB96C18F73EF9009EF2E9 /* bargraph */,
-				603EB98B18F73EF9009EF2E9 /* bargraphTests */,
+				603EB96C18F73EF9009EF2E9 /* barchart */,
 				603EB96518F73EF8009EF2E9 /* Frameworks */,
 				603EB96418F73EF8009EF2E9 /* Products */,
 			);
@@ -92,8 +92,8 @@
 		603EB96418F73EF8009EF2E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				603EB96318F73EF8009EF2E9 /* bargraph.app */,
-				603EB98418F73EF9009EF2E9 /* bargraphTests.xctest */,
+				603EB96318F73EF8009EF2E9 /* barchart.app */,
+				603EB98418F73EF9009EF2E9 /* barchartTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +101,7 @@
 		603EB96518F73EF8009EF2E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				603EB99B18F73F38009EF2E9 /* MRBarChart */,
 				603EB96618F73EF8009EF2E9 /* Foundation.framework */,
 				603EB96818F73EF8009EF2E9 /* CoreGraphics.framework */,
 				603EB96A18F73EF8009EF2E9 /* UIKit.framework */,
@@ -109,7 +110,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		603EB96C18F73EF9009EF2E9 /* bargraph */ = {
+		603EB96C18F73EF9009EF2E9 /* barchart */ = {
 			isa = PBXGroup;
 			children = (
 				603EB97518F73EF9009EF2E9 /* MRAppDelegate.h */,
@@ -120,44 +121,37 @@
 				603EB97E18F73EF9009EF2E9 /* Images.xcassets */,
 				603EB96D18F73EF9009EF2E9 /* Supporting Files */,
 			);
-			path = bargraph;
+			path = barchart;
 			sourceTree = "<group>";
 		};
 		603EB96D18F73EF9009EF2E9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				603EB96E18F73EF9009EF2E9 /* bargraph-Info.plist */,
+				603EB96E18F73EF9009EF2E9 /* barchart-Info.plist */,
 				603EB96F18F73EF9009EF2E9 /* InfoPlist.strings */,
 				603EB97218F73EF9009EF2E9 /* main.m */,
-				603EB97418F73EF9009EF2E9 /* bargraph-Prefix.pch */,
+				603EB97418F73EF9009EF2E9 /* barchart-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		603EB98B18F73EF9009EF2E9 /* bargraphTests */ = {
+		603EB99B18F73F38009EF2E9 /* MRBarChart */ = {
 			isa = PBXGroup;
 			children = (
-				603EB99118F73EF9009EF2E9 /* bargraphTests.m */,
-				603EB98C18F73EF9009EF2E9 /* Supporting Files */,
+				603EB99C18F73F38009EF2E9 /* MRBarChart.h */,
+				603EB99D18F73F38009EF2E9 /* MRBarChart.m */,
+				603EB99E18F73F38009EF2E9 /* MRBarChartCell.h */,
+				603EB99F18F73F38009EF2E9 /* MRBarChartCell.m */,
 			);
-			path = bargraphTests;
-			sourceTree = "<group>";
-		};
-		603EB98C18F73EF9009EF2E9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				603EB98D18F73EF9009EF2E9 /* bargraphTests-Info.plist */,
-				603EB98E18F73EF9009EF2E9 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
+			path = MRBarChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		603EB96218F73EF8009EF2E9 /* bargraph */ = {
+		603EB96218F73EF8009EF2E9 /* barchart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 603EB99518F73EF9009EF2E9 /* Build configuration list for PBXNativeTarget "bargraph" */;
+			buildConfigurationList = 603EB99518F73EF9009EF2E9 /* Build configuration list for PBXNativeTarget "barchart" */;
 			buildPhases = (
 				603EB95F18F73EF8009EF2E9 /* Sources */,
 				603EB96018F73EF8009EF2E9 /* Frameworks */,
@@ -167,14 +161,14 @@
 			);
 			dependencies = (
 			);
-			name = bargraph;
+			name = barchart;
 			productName = bargraph;
-			productReference = 603EB96318F73EF8009EF2E9 /* bargraph.app */;
+			productReference = 603EB96318F73EF8009EF2E9 /* barchart.app */;
 			productType = "com.apple.product-type.application";
 		};
-		603EB98318F73EF9009EF2E9 /* bargraphTests */ = {
+		603EB98318F73EF9009EF2E9 /* barchartTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 603EB99818F73EF9009EF2E9 /* Build configuration list for PBXNativeTarget "bargraphTests" */;
+			buildConfigurationList = 603EB99818F73EF9009EF2E9 /* Build configuration list for PBXNativeTarget "barchartTests" */;
 			buildPhases = (
 				603EB98018F73EF9009EF2E9 /* Sources */,
 				603EB98118F73EF9009EF2E9 /* Frameworks */,
@@ -185,9 +179,9 @@
 			dependencies = (
 				603EB98A18F73EF9009EF2E9 /* PBXTargetDependency */,
 			);
-			name = bargraphTests;
+			name = barchartTests;
 			productName = bargraphTests;
-			productReference = 603EB98418F73EF9009EF2E9 /* bargraphTests.xctest */;
+			productReference = 603EB98418F73EF9009EF2E9 /* barchartTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -205,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 603EB95E18F73EF8009EF2E9 /* Build configuration list for PBXProject "bargraph" */;
+			buildConfigurationList = 603EB95E18F73EF8009EF2E9 /* Build configuration list for PBXProject "barchart" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -218,8 +212,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				603EB96218F73EF8009EF2E9 /* bargraph */,
-				603EB98318F73EF9009EF2E9 /* bargraphTests */,
+				603EB96218F73EF8009EF2E9 /* barchart */,
+				603EB98318F73EF9009EF2E9 /* barchartTests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603EB99018F73EF9009EF2E9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				603EB97318F73EF9009EF2E9 /* main.m in Sources */,
+				603EB9A018F73F38009EF2E9 /* MRBarChart.m in Sources */,
 				603EB97D18F73EF9009EF2E9 /* MRViewController.m in Sources */,
+				603EB9A118F73F38009EF2E9 /* MRBarChartCell.m in Sources */,
 				603EB97718F73EF9009EF2E9 /* MRAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603EB99218F73EF9009EF2E9 /* bargraphTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +263,7 @@
 /* Begin PBXTargetDependency section */
 		603EB98A18F73EF9009EF2E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 603EB96218F73EF8009EF2E9 /* bargraph */;
+			target = 603EB96218F73EF8009EF2E9 /* barchart */;
 			targetProxy = 603EB98918F73EF9009EF2E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -289,14 +283,6 @@
 				603EB97918F73EF9009EF2E9 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		603EB98E18F73EF9009EF2E9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				603EB98F18F73EF9009EF2E9 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -378,9 +364,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bargraph/bargraph-Prefix.pch";
-				INFOPLIST_FILE = "bargraph/bargraph-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "barchart/barchart-Prefix.pch";
+				INFOPLIST_FILE = "barchart/barchart-Info.plist";
+				PRODUCT_NAME = barchart;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,9 +377,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bargraph/bargraph-Prefix.pch";
-				INFOPLIST_FILE = "bargraph/bargraph-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "barchart/barchart-Prefix.pch";
+				INFOPLIST_FILE = "barchart/barchart-Info.plist";
+				PRODUCT_NAME = barchart;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -413,8 +399,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "bargraphTests/bargraphTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "bargraphTests/barchartTests-Info.plist";
+				PRODUCT_NAME = barchartTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -431,8 +417,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bargraph/bargraph-Prefix.pch";
-				INFOPLIST_FILE = "bargraphTests/bargraphTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "bargraphTests/barchartTests-Info.plist";
+				PRODUCT_NAME = barchartTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -441,7 +427,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		603EB95E18F73EF8009EF2E9 /* Build configuration list for PBXProject "bargraph" */ = {
+		603EB95E18F73EF8009EF2E9 /* Build configuration list for PBXProject "barchart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				603EB99318F73EF9009EF2E9 /* Debug */,
@@ -450,21 +436,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		603EB99518F73EF9009EF2E9 /* Build configuration list for PBXNativeTarget "bargraph" */ = {
+		603EB99518F73EF9009EF2E9 /* Build configuration list for PBXNativeTarget "barchart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				603EB99618F73EF9009EF2E9 /* Debug */,
 				603EB99718F73EF9009EF2E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		603EB99818F73EF9009EF2E9 /* Build configuration list for PBXNativeTarget "bargraphTests" */ = {
+		603EB99818F73EF9009EF2E9 /* Build configuration list for PBXNativeTarget "barchartTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				603EB99918F73EF9009EF2E9 /* Debug */,
 				603EB99A18F73EF9009EF2E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
