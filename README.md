@@ -38,7 +38,7 @@ Optionally, you can return a different color for each bar.
 - **colorForBarAtIndex**: Returns the label for a given segment. Example:
 ```Objective-C
 - (UIColor *)barChart:(MRBarChart *)chart colorForBarAtIndex:(NSInteger)index {
-    return @"Segment 1";
+    return [UIColor redColor];
 }
 ```
 
@@ -70,8 +70,12 @@ To reload the bar view call **reloadData:(BOOL)animated**.
 
 Adding and removing bars can be done by using:
 
+```Objective-C
 - (void)addBarAtIndex:(NSInteger)index animated:(BOOL)animated;
+```
+```Objective-C
 - (void)removeBarAtIndex:(NSInteger)index;
+```
 
 Check the sample project for documentation and usage options
 
