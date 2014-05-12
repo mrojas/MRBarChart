@@ -63,6 +63,9 @@ The following properties are customizable:
 - **barWidth**: The width of the bars. Default: 15.
 - **barPadding**: The spacing between the bars. Default: 2.
 - **markColor**: The color of the mark. Default: light gray.
+- **barLabelProportion**: Specified the proportional height that the bars take in relation to the labels. Allowed values are 0.0 to 1.0. If 1.0, bars take the entire space and labels are not shown. If 0.0, only labels will be shown, which doesn't make much sense for this component. For example, setting this value to 0.7 will use 70% of the vertical space for the bars, and 30% for the labels.
+- **labelFont**: The font for the labels below the bars
+- **labelColor**: The color for the labels below the bars
 
 ### Reloading
 
