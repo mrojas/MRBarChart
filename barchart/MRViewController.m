@@ -11,6 +11,7 @@
 
 #define kMaxBars 10
 #define kMaxValue 100.0
+#define kYLabelIncrement 20.0
 
 @interface MRViewController () <MRBarChartDataSource, MRBarChartDelegate>
 @property (strong, nonatomic) IBOutlet MRBarChart *barChart;
@@ -22,6 +23,7 @@
 @implementation MRViewController {
     NSMutableArray *_values;
     NSInteger _markValue;
+    NSInteger _yLabelCount;
 }
 
 - (void)viewDidLoad
@@ -39,6 +41,7 @@
     _barChart.markValue = 60.0;
     _barChart.defaultColor = [UIColor colorWithRed:75.0/255.0 green:88.0/255.0 blue:173.0/255.0 alpha:1.0];
     _barChart.barLabelProportion = 0.60;
+    _yLabelCount = 0;
     _barChart.dataSource = self;
     _barChart.delegate = self;
     
@@ -107,6 +110,16 @@
     _barChart.barLabelProportion = proportion;
 }
 
+- (IBAction)yLabelsMoreButtonPressed:(id)sender {
+    _yLabelCount = MIN(5, _yLabelCount+1);
+    [_barChart reloadData];
+}
+
+- (IBAction)yLabelsLessButtonPressed:(id)sender {
+    _yLabelCount = MAX(0, _yLabelCount-1);
+    [_barChart reloadData];
+}
+
 #pragma mark MRBarGraphDataSource implementation
 - (NSInteger)numberOfBarsInChart:(MRBarChart *)chart {
     return _values.count;
@@ -126,6 +139,19 @@
 
 - (NSString *)barChart:(MRBarChart *)chart labelForBarAtIndex:(NSInteger)index {
     return [NSString stringWithFormat:@"Bar %d", index];
+}
+
+- (NSInteger)numberOfYAxisLabelsInChart:(MRBarChart *)chart {
+    return _yLabelCount;
+}
+
+- (NSString *)barChart:(MRBarChart *)chart labelForYIndex:(NSInteger)index {
+    CGFloat val = (CGFloat)index * 20.0;
+    return [NSString stringWithFormat:@"Val %.2f", val];
+}
+
+- (CGFloat)barChart:(MRBarChart *)chart positionForYLabelAtIndex:(NSInteger)index {
+    return (CGFloat)index * 20.0;
 }
 
 #pragma mark MRBarGraphDelegate implementation

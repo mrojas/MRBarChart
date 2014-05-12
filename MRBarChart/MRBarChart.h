@@ -52,6 +52,37 @@
  */
 - (NSString *)barChart:(MRBarChart *)chart labelForBarAtIndex:(NSInteger)index;
 
+/**
+ *  Specified the amount of labels to be shown in the left side of the chart (Y axis)
+ *
+ *  @param chart The chart
+ *
+ *  @return The amount of labels to display
+ */
+- (NSInteger)numberOfYAxisLabelsInChart:(MRBarChart *)chart;
+
+/**
+ *  The label to be displayed on the Y axis.
+ *
+ *  @param chart The chart
+ *  @param index The index
+ *
+ *  @return The label to display
+ */
+- (NSString *)barChart:(MRBarChart *)chart labelForYIndex:(NSInteger)index;
+
+/**
+ *  The position to display a label in the Y axis. The position returned is proportional to the max value.
+ *  For example, returning 0.0 would put the label at the bottom of the chart, and returning maxValue (whatever the max value
+ *  for the graph is) would put it at the top.
+ *
+ *  @param chart The bar chart
+ *  @param index The index of the y-axis label
+ *
+ *  @return The value/position where the label must be displayed.
+ */
+- (CGFloat)barChart:(MRBarChart *)chart positionForYLabelAtIndex:(NSInteger)index;
+
 @end
 
 @protocol MRBarChartDelegate <NSObject>
@@ -119,6 +150,21 @@
  *  The color of the labels, when present
  */
 @property (nonatomic, strong) UIColor *labelColor;
+
+/**
+ *  Font to use for labels in the Y axis
+ */
+@property (nonatomic, strong) UIFont *yLabelFont;
+
+/**
+ *  Color to use for labels in the Y axis
+ */
+@property (nonatomic, strong) UIColor *yLabelColor;
+
+/**
+ *  The space reserved for the labels in the Y axis. Default: 80.0.
+ */
+@property (nonatomic, assign) CGFloat yLabelsWidth;
 
 /**
  *  The datasource of this chart

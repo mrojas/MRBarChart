@@ -143,9 +143,37 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y Axis labels" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-vz-CPp">
+                                <rect key="frame" x="202" y="295" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3L-mP-nm4">
+                                <rect key="frame" x="268" y="324" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Less">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="yLabelsLessButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TmB-zQ-mAO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usr-iG-uDd">
+                                <rect key="frame" x="224" y="324" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="More">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="yLabelsMoreButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fN3-P7-Jba"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="p3L-mP-nm4" firstAttribute="top" secondItem="Xob-vz-CPp" secondAttribute="bottom" constant="8" id="0X5-hv-F1L"/>
                             <constraint firstItem="1ht-eK-RSt" firstAttribute="leading" secondItem="5Fn-4I-cKS" secondAttribute="trailing" constant="36" id="0eN-K3-rv6"/>
                             <constraint firstItem="zKT-fV-CDP" firstAttribute="trailing" secondItem="qct-Up-uT3" secondAttribute="trailing" id="65x-Z3-WpD"/>
                             <constraint firstItem="mvn-Y5-4s9" firstAttribute="top" secondItem="OJO-4P-r3c" secondAttribute="top" id="8U1-nG-XAm"/>
@@ -154,6 +182,7 @@
                             <constraint firstAttribute="trailing" secondItem="cHb-6e-c1S" secondAttribute="trailing" constant="20" symbolic="YES" id="Dp3-O5-aC6"/>
                             <constraint firstItem="5Fn-4I-cKS" firstAttribute="leading" secondItem="P4n-IU-jmG" secondAttribute="leading" id="Dto-jg-3pO"/>
                             <constraint firstItem="zKT-fV-CDP" firstAttribute="top" secondItem="gJG-Ag-P0A" secondAttribute="top" id="E5T-Eg-rAu"/>
+                            <constraint firstItem="p3L-mP-nm4" firstAttribute="leading" secondItem="Usr-iG-uDd" secondAttribute="trailing" constant="8" id="FFb-gf-AzK"/>
                             <constraint firstItem="gJG-Ag-P0A" firstAttribute="top" secondItem="qct-Up-uT3" secondAttribute="bottom" constant="8" symbolic="YES" id="GoT-gc-Yo9"/>
                             <constraint firstItem="FOg-tj-XAX" firstAttribute="top" secondItem="aoq-2u-v7P" secondAttribute="top" id="Hkg-tm-S7o"/>
                             <constraint firstItem="mvn-Y5-4s9" firstAttribute="leading" secondItem="OJO-4P-r3c" secondAttribute="trailing" constant="8" symbolic="YES" id="HpH-x6-5gw"/>
@@ -165,16 +194,20 @@
                             <constraint firstItem="P4n-IU-jmG" firstAttribute="top" secondItem="Flw-QK-bRi" secondAttribute="bottom" constant="8" symbolic="YES" id="Z8G-7G-ZJ1"/>
                             <constraint firstItem="P4n-IU-jmG" firstAttribute="leading" secondItem="OJO-4P-r3c" secondAttribute="leading" id="e9r-kI-xzV"/>
                             <constraint firstItem="SdR-h0-Tc1" firstAttribute="top" secondItem="cHb-6e-c1S" secondAttribute="bottom" constant="8" symbolic="YES" id="ePA-Ff-hnW"/>
+                            <constraint firstItem="Usr-iG-uDd" firstAttribute="centerY" secondItem="p3L-mP-nm4" secondAttribute="centerY" id="ewC-uw-PL9"/>
                             <constraint firstItem="OJO-4P-r3c" firstAttribute="top" secondItem="P4n-IU-jmG" secondAttribute="bottom" constant="8" symbolic="YES" id="fZD-lF-ZhI"/>
+                            <constraint firstItem="qct-Up-uT3" firstAttribute="trailing" secondItem="Xob-vz-CPp" secondAttribute="trailing" id="iVk-Au-PcG"/>
                             <constraint firstItem="zKT-fV-CDP" firstAttribute="leading" secondItem="gJG-Ag-P0A" secondAttribute="trailing" constant="8" symbolic="YES" id="iy3-7d-F9x"/>
                             <constraint firstItem="SdR-h0-Tc1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="j5q-JF-NDK"/>
                             <constraint firstItem="Flw-QK-bRi" firstAttribute="top" secondItem="B6s-WJ-EK4" secondAttribute="top" id="jmT-42-XWk"/>
                             <constraint firstAttribute="trailing" secondItem="KAM-Ih-sT7" secondAttribute="trailing" constant="20" id="ko7-fB-05k"/>
                             <constraint firstItem="P4n-IU-jmG" firstAttribute="leading" secondItem="SdR-h0-Tc1" secondAttribute="leading" id="qRv-A8-602"/>
+                            <constraint firstItem="p3L-mP-nm4" firstAttribute="trailing" secondItem="zKT-fV-CDP" secondAttribute="trailing" id="rMZ-Gq-ecU"/>
                             <constraint firstItem="cHb-6e-c1S" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" symbolic="YES" id="ra4-or-Cu0"/>
                             <constraint firstAttribute="trailing" secondItem="qct-Up-uT3" secondAttribute="trailing" constant="20" id="t2O-Pn-gai"/>
                             <constraint firstItem="Flw-QK-bRi" firstAttribute="top" secondItem="SdR-h0-Tc1" secondAttribute="bottom" constant="8" symbolic="YES" id="tFr-YR-hWi"/>
                             <constraint firstItem="FOg-tj-XAX" firstAttribute="top" secondItem="KAM-Ih-sT7" secondAttribute="bottom" constant="8" symbolic="YES" id="teI-aL-dIM"/>
+                            <constraint firstItem="5Fn-4I-cKS" firstAttribute="centerY" secondItem="Xob-vz-CPp" secondAttribute="centerY" id="vRP-ka-Zr1"/>
                             <constraint firstItem="KAM-Ih-sT7" firstAttribute="top" secondItem="cHb-6e-c1S" secondAttribute="bottom" constant="8" id="xFh-Sx-V4C"/>
                             <constraint firstItem="Flw-QK-bRi" firstAttribute="leading" secondItem="SdR-h0-Tc1" secondAttribute="leading" id="y98-OU-P52"/>
                         </constraints>

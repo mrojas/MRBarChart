@@ -24,6 +24,7 @@
     NSInteger _lastIndexSeen;
     CGFloat _barHeight;
     CGFloat _labelHeight;
+    NSMutableArray *_guideLabels;
 }
 
 - (id)init {
@@ -59,6 +60,9 @@
     _barLabelProportion = 1.0;
     _labelColor = [UIColor blackColor];
     _labelFont = [UIFont systemFontOfSize:13.0];
+    _yLabelColor = [UIColor darkGrayColor];
+    _yLabelFont = [UIFont systemFontOfSize:11.0];
+    _yLabelsWidth = 60.0;
     _flowLayout = [[UICollectionViewFlowLayout alloc] init];
     [_flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     [_flowLayout setMinimumInteritemSpacing:0.0f];
@@ -79,7 +83,7 @@
 
 - (void)needsReload {
     _flowLayout.itemSize = CGSizeMake(_barWidth + (_barPadding * 2.0), self.frame.size.height);
-    [_collectionView reloadData];
+    [self reloadData];
 }
 
 - (void)setMaxValue:(CGFloat)maxValue {
@@ -129,6 +133,34 @@
 - (void)reloadDataAnimated:(BOOL)animated {
     _animate = animated;
     [_collectionView reloadData];
+    
+    [_guideLabels makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [_guideLabels removeAllObjects];
+    CGRect cFrame = _collectionView.frame;
+    if ([_dataSource respondsToSelector:@selector(numberOfYAxisLabelsInChart:)] && [_dataSource respondsToSelector:@selector(barChart:labelForYIndex:)]) {
+        cFrame.origin.x = _yLabelsWidth;
+        NSInteger yLabelsCount = [_dataSource numberOfYAxisLabelsInChart:self];
+        _guideLabels = [NSMutableArray arrayWithCapacity:yLabelsCount];
+        for (int i = 0; i < yLabelsCount; i++) {
+            CGFloat y = (_barHeight - [_yLabelFont lineHeight]) - (i * (_barHeight / yLabelsCount));
+            if ([_dataSource respondsToSelector:@selector(barChart:positionForYLabelAtIndex:)]) {
+                y = _barHeight - [_yLabelFont lineHeight] - ([_dataSource barChart:self positionForYLabelAtIndex:i] / _maxValue) * _barHeight;
+            }
+            UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, y, _yLabelsWidth, [_yLabelFont lineHeight])];
+            l.backgroundColor = [UIColor clearColor];
+            l.textColor = _yLabelColor;
+            l.font = _yLabelFont;
+            l.text = [_dataSource barChart:self labelForYIndex:i];
+            [self addSubview:l];
+            [_guideLabels addObject:l];
+        }
+    }
+    
+    if (_guideLabels.count == 0) {
+        cFrame.origin.x = 0.0;
+    }
+    
+    _collectionView.frame = cFrame;
 }
 
 - (void)addBarAtIndex:(NSInteger)index animated:(BOOL)animated {
