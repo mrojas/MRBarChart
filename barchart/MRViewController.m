@@ -38,6 +38,7 @@
     _barChart.maxValue = kMaxValue;
     _barChart.markValue = 60.0;
     _barChart.defaultColor = [UIColor colorWithRed:75.0/255.0 green:88.0/255.0 blue:173.0/255.0 alpha:1.0];
+    _barChart.barLabelProportion = 0.60;
     _barChart.dataSource = self;
     _barChart.delegate = self;
     
@@ -101,6 +102,11 @@
     [self refreshBarPadding];
 }
 
+- (IBAction)labelsSwitchAction:(UISwitch *)sender {
+    CGFloat proportion = sender.on ? 0.60 : 1.0;
+    _barChart.barLabelProportion = proportion;
+}
+
 #pragma mark MRBarGraphDataSource implementation
 - (NSInteger)numberOfBarsInChart:(MRBarChart *)chart {
     return _values.count;
@@ -116,6 +122,10 @@
     }
     
     return nil;
+}
+
+- (NSString *)barChart:(MRBarChart *)chart labelForBarAtIndex:(NSInteger)index {
+    return [NSString stringWithFormat:@"Bar %d", index];
 }
 
 #pragma mark MRBarGraphDelegate implementation

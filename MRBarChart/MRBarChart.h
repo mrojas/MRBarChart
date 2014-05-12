@@ -42,6 +42,16 @@
  */
 - (UIColor *)barChart:(MRBarChart *)chart colorForBarAtIndex:(NSInteger)index;
 
+/**
+ *  The label to be displayed below the bar.
+ *
+ *  @param chart The chart containing the bar
+ *  @param index The index of the bar
+ *
+ *  @return The label of the bar
+ */
+- (NSString *)barChart:(MRBarChart *)chart labelForBarAtIndex:(NSInteger)index;
+
 @end
 
 @protocol MRBarChartDelegate <NSObject>
@@ -87,6 +97,28 @@
  *  Color of the optional mark. Default: light gray
  */
 @property (nonatomic, strong) UIColor *markColor;
+
+/**
+ *  The proportion of the total height that bars occupy in relation to the labels, when enabled.
+ *  Valid values are 0.0 to 1.0. 1.0 will make the bar take the entire vertical space, while setting it
+ *  to 0.0 will make the labels take the entire space. 0.5 will make the bars take half of the chart, and
+ *  labels the other half.
+ *
+ *  IMPORTANT: The data source method barChar:labelForBarAtIndex: will only be called if this value is
+ *  less than 1.0, since that means labels will be displayed in the chart.
+ *
+ */
+@property (nonatomic, assign) CGFloat barLabelProportion;
+
+/**
+ *  The font of the labels, when present
+ */
+@property (nonatomic, strong) UIFont *labelFont;
+
+/**
+ *  The color of the labels, when present
+ */
+@property (nonatomic, strong) UIColor *labelColor;
 
 /**
  *  The datasource of this chart

@@ -22,6 +22,8 @@
     UIView *_markView;
     BOOL _animate;
     NSInteger _lastIndexSeen;
+    CGFloat _barHeight;
+    CGFloat _labelHeight;
 }
 
 - (id)init {
@@ -53,6 +55,10 @@
     _defaultColor = [UIColor blueColor];
     _barPadding = kDefaultBarPadding;
     _barWidth = kDefaultBarWidth;
+    _barHeight = self.frame.size.height;
+    _barLabelProportion = 1.0;
+    _labelColor = [UIColor blackColor];
+    _labelFont = [UIFont systemFontOfSize:13.0];
     _flowLayout = [[UICollectionViewFlowLayout alloc] init];
     [_flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     [_flowLayout setMinimumInteritemSpacing:0.0f];
@@ -99,7 +105,7 @@
         _markView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
         [self addSubview:_markView];
     }
-    CGFloat y = _collectionView.frame.size.height -  ((_markValue / _maxValue) * _collectionView.frame.size.height);
+    CGFloat y = _barHeight -  ((_markValue / _maxValue) * _barHeight);
     CGRect frame = CGRectMake(0, y, _collectionView.frame.size.width, 1.0/[UIScreen mainScreen].scale);
     _markView.frame = frame;
 }
@@ -107,6 +113,13 @@
 - (void)setMarkColor:(UIColor *)markColor {
     _markColor = markColor;
     _markView.backgroundColor = _markColor;
+}
+
+- (void)setBarLabelProportion:(CGFloat)barLabelProportion {
+    _barLabelProportion = barLabelProportion;
+    _barHeight = self.frame.size.height * _barLabelProportion;
+    [self setMarkValue:_markValue];
+    [self needsReload];
 }
 
 - (void)reloadData {
@@ -149,7 +162,6 @@
         cell.barPadding = _barPadding;
         CGFloat val = [_dataSource barChart:self valueForBarAtIndex:indexPath.row];
         CGFloat proportion = val / _maxValue;
-        [cell setValue:proportion animated:_animate && _lastIndexSeen < indexPath.row];
         
         if ([_dataSource respondsToSelector:@selector(barChart:colorForBarAtIndex:)]) {
             UIColor *color = [_dataSource barChart:self colorForBarAtIndex:indexPath.row];
@@ -161,6 +173,18 @@
         } else {
             [cell setColor:_defaultColor];
         }
+        
+        [cell setBarLabelProportion:_barLabelProportion];
+        if (_barLabelProportion < 1.0 && [_dataSource respondsToSelector:@selector(barChart:labelForBarAtIndex:)]) {
+            NSString *text = [_dataSource barChart:self labelForBarAtIndex:indexPath.row];
+            [cell setLabelText:text];
+            cell.label.textColor = _labelColor;
+            cell.label.font = _labelFont;
+        } else {
+            [cell setLabelText:nil];
+        }
+        
+        [cell setValue:proportion animated:_animate && _lastIndexSeen < indexPath.row];
         
         _lastIndexSeen = indexPath.row > _lastIndexSeen ? indexPath.row : _lastIndexSeen;
     }
